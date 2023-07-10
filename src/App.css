@@ -1,12 +1,92 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
   color: white;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .Header {
+  text-align: center;
   color: gold;
   text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 100;
-  letter-spacing: 0.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.1rem;
 }
 /* write your parent styles in here for your App.js */
+
+.accordeon {
+  background-color: rgba(34, 34, 34, 0.9);
+  margin: 20px;
+  height: 3rem;
+  overflow: hidden;
+  border: 1px solid aliceblue;
+  border-radius: 3px;
+  -webkit-transition: max-heigth 0.5s;
+  -moz-transition: max-heigth 0.5s;
+  -ms-transition: max-heigth 0.5s;
+  -o-transition: max-heigth 0.5s;
+  transition: max-heigth 0.5s;
+}
+
+.acc-title {
+  font-size: 1rem;
+  color: gold;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 1.5rem;
+  transition: background-color 0.5s;
+}
+
+.acc-title:hover {
+  background-color: #444;
+}
+
+.accordeon.open {
+  height: auto;
+  /*max-height: 600px;
+  overflow-y: scroll;*/
+}
+
+.accordeon.open .acc-title {
+  border-bottom: 1px solid white;
+}
+
+.accordeon.open .arrow {
+  rotate: 90deg;
+}
+
+.accordeon .arrow {
+  rotate: 270deg;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  text-align: center;
+  color: gold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+li {
+  padding: 0.3rem 0;
+}
